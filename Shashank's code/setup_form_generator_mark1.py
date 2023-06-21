@@ -1,11 +1,11 @@
-# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
-#  Title: Setup form generator                            *                          
-#  Author: Shashank Shrivastav                            *                        
-#  Email: contactshashank10@gmail.com                     *                         
-#  Date: 2023                                             *                           
-#  Code version: 1.0                                      *                           
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+#  Title: Setup form generator                            *
+#  Author: Shashank Shrivastav                            *
+#  Email: contactshashank10@gmail.com                     *
+#  Date: 2023                                             *
+#  Code version: 1.0                                      *
 #  Availability: https://github.com/GodOfPerceptionn      *
-# * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 
 import requests
