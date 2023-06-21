@@ -223,7 +223,7 @@ service:
   availability: "development"
   connectorType: "lite"
   coil:
-    type: "{ss}"
+    type: "{service}"
     languageVersion: "2.0.0"
 api: {{}}
 metrics: {{}}
