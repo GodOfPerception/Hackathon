@@ -739,5 +739,6 @@ except FileNotFoundError:
 
 
 generate_setup_guide(mdname, oname)
-generate_files(api_name, description, url, mdname, oname)
 generate_clj_file()
+generate_files(api_name, description, url, mdname, oname)
+
