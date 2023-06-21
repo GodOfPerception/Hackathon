@@ -545,7 +545,7 @@ def generate_clj_file():
       "response_type" "code"
       "client_id" "{{clientId}}"
       "scope" "contact_read all_contact_read conversation_read user_read account_read playbook_read"
-      "redirect_uri" "$FIVETRAN-APP-URL/integrations/drift/oauth2/return" ;;return-path
+      "redirect_uri" "$FIVETRAN-APP-URL/integrations/{api_name}/oauth2/return" ;;return-path
       )
      )
     )
@@ -667,7 +667,7 @@ def generate_clj_file():
   (http/get :base-url "{base_url}"
     (header-params {header_params}))
   (paging/no-pagination)
-  (auth/{'http-bearer' if auth_option == "1" else 'oauth2/refresh-token-with-client-credentials'  })
+  (auth/{'http-basic' if auth_option == "1" else ('http-bearer' if auth_option == "2" else ('apikey-auth-header' if auth_option == "3" else('apikey-custom-header' if auth_option == "4" else('oauth2'))))})
   (error-handler
     (when :status 429 :action rate-limit)))
 
