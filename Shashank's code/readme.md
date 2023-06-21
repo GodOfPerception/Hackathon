@@ -1,3 +1,15 @@
+<!--
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+#  Title: Setup form generator                            *
+#  Author: Shashank Shrivastav                            *
+#  Email: contactshashank10@gmail.com                     *
+#  Date: 2023                                             *
+#  Code version: 1.0                                      *
+#  Availability: https://github.com/GodOfPerceptionn      *
+# * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+-->
+
+
 Setup form generator:
 
 With the help of this script, you may create setup forms with minimal user input.
