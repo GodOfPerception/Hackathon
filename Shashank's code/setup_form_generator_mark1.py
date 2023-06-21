@@ -18,7 +18,6 @@ import json
 def take_inputs():
     global api_name
     global auth_option
-    global service_option
     global base_url
     global header_params
     global query_params
@@ -36,6 +35,7 @@ def take_inputs():
     global capture_deletes
     global mdname
     global oname
+    global ss
 
 
 
@@ -213,7 +213,7 @@ def generate_files(api_name, description, url, mdname, oname):
         9: "BITool"
     }
 
-    ss = type_mapping.get(service, "")
+    ss = type_mapping.get(servicee, "")
     name_config_yaml = f"""---
 service:
   name: "{cap(api_name)}"
@@ -223,7 +223,7 @@ service:
   availability: "development"
   connectorType: "lite"
   coil:
-    type: "{service}"
+    type: "{ss}"
     languageVersion: "2.0.0"
 api: {{}}
 metrics: {{}}
@@ -728,12 +728,24 @@ try:
         capture_deletes = capture_deletes.split()
         capture_deletes = [f'{delete}' for delete in capture_deletes]
         capture_deletes = ' '.join(capture_deletes)
+        type_mapping = {
+            1: "Marketing",
+            2: "HumanResources",
+            3: "Finance",
+            4: "Productivity",
+            5: "Engineering",
+            6: "Support",
+            7: "Sales",
+            8: "Security",
+            9: "BITool"
+        }
 
-        service = json_data["service"]
+        servicee = int(json_data["service"])
+        ss = type_mapping[servicee]
 
         if not any([api_name, auth_option, base_url, header_params, query_params,
                     table_name, doc_url, endpoint, extract_path, primary_key,
-                    auth_url, token_url, refresh_url, description, url, service]):
+                    auth_url, token_url, refresh_url, description, url, servicee]):
             print("Json is empty")
             take_inputs()
 
@@ -751,4 +763,3 @@ except FileNotFoundError:
 generate_setup_guide(mdname, oname)
 generate_clj_file()
 generate_files(api_name, description, url, mdname, oname)
-
