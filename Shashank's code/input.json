@@ -1,0 +1,20 @@
+{
+  "name": "kandji",
+  "description":"Kandji is a cloud based software solution.",
+  "url": "https://www.kandji.io/",
+  "service": "5",
+  "file_name": "kandji",
+  "Option" : "2",
+  "base_url": "https://api.kandji.io/api/v1",
+  "header_params": "Accept application/json",
+  "query_params": "",
+  "table_name": "USERS",
+  "doc_url": "https://api.docs.kandji.io",
+  "endpoint": "/integration/apple/ade",
+  "extract_path": "results",
+  "primary_key": "id",
+  "auth_url": "",
+  "token_url": "",
+  "refresh_url": "",
+  "capture_deletes": ""
+}
