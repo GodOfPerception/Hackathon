@@ -1,10 +1,9 @@
 {
-  "name": "piwik",
-  "description":"this is test",
-  "url": "https://www.piwik.co/",
-  "service": "2",
-  "file_name": "piwik",
-  "Option" : "1",
+  "api_name": "shortcut",
+  "description":"this is test api",
+  "url": "https://www.shortcut.com/",
+  "service": "1",
+  "auth_option" : "8",
   "base_url": "https.jfom",
   "header_params": "applicaiton jason",
   "query_params": "",
@@ -16,5 +15,18 @@
   "auth_url": "",
   "token_url": "",
   "refresh_url": "",
-  "capture_deletes": ""
+  "capture_deletes": "user tabl"
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
